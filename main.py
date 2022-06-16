@@ -151,16 +151,17 @@ def generate():
     knpk.pack()
 
 
-window = Tk()
-window.title(f'CharGen v{VERSION}')
-window.geometry('')
+if __name__ == '__main__':
+    window = Tk()
+    window.title(f'CharGen v{VERSION}')
+    window.geometry('')
 
-btn = Button(window, text="Generate", command=generate, padx=5, pady=5)
-btn.grid(column=1, row=4)
+    btn = Button(window, text="Generate", command=generate, padx=5, pady=5)
+    btn.grid(column=1, row=4)
 
-lbl_heads = Label(window, text=f'Total characters: {total_chars}', padx=5, pady=5)
-lbl_heads.grid(column=0, row=5)
-lbl_empty = Label(window, text='Press Generate to start', padx=5, pady=5)
-lbl_empty.grid(column=2, row=5)
+    lbl_heads = Label(window, text=f'Total characters: {total_chars}', padx=5, pady=5)
+    lbl_heads.grid(column=0, row=5)
+    lbl_empty = Label(window, text='Press Generate to start', padx=5, pady=5)
+    lbl_empty.grid(column=2, row=5)
 
-window.mainloop()
+    window.mainloop()
